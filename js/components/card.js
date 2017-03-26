@@ -7,10 +7,10 @@ export default function Card(props){
 		);
 };
 
-
 Card.propTypes = {
 	text: React.PropTypes.string
 };
+
 Card.defaultProps = {
-    text: ''
+    text: 'default text'
  };
