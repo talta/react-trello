@@ -1,21 +1,43 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Card = require('./card');
-var List = require('./list');
+import List from './list';
 
 
-var Board = function() {
-    var lists = [];
-    for (var i=0; i<5; i++) {
-        lists.push(<List />);
+export default class Board extends React.Component{
+	constructor(props){
+		super(props);
+
+		this.state= {
+			lists:[{
+				title:'the first list title'
+			},
+			{
+				title: 'this is the second list title'
+			}]
+		};
+	}
+
+    render() {
+        const lists = this.state.lists.map((list, index) =>
+            <List key={index} {...list} />
+        );
+
+        return (
+            <div className="board">
+                <h2>{this.props.title}</h2>
+                <div className="lists">
+                    {lists}
+                </div>
+              </div>
+                     );
     }
-    return (
-        <div className="board">
-            {lists}
-        </div>
-    );
+}
+ 
+
+Board.propTypes = {
+	boardTitle:React.PropTypes.string
 };
 
-
-
-module.exports = Board;
+Board.defaultProps = {
+    title: 'Board'
+};

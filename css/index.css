@@ -1,0 +1,29 @@
+.board {
+            margin-top: 10%;
+            margin-left: 100px;
+        }
+.list {
+    width: 200px;
+    text-align: center;
+    border: 1px solid black;
+    height: 200px;
+    padding: 10px;
+    margin: 10px;
+    vertical-align: top;
+    background-color: green;
+}
+.list-element {
+    display: inline-block;
+}
+.list-UL {
+    text-align: left;
+}
+header {
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+form,
+.board-header {
+    margin-left: 10px;
+}

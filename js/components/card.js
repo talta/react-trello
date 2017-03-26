@@ -1,9 +1,16 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var Card = function(){
+export default function Card(props){
 	return (
-		<div className = "card">this is a card</div>);
+			<div className = "card">{props.text}</div>
+		);
 };
 
-module.exports = Card;
+
+Card.propTypes = {
+	text: React.PropTypes.string
+};
+Card.defaultProps = {
+    text: ''
+ };
