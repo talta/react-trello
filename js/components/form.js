@@ -2,8 +2,9 @@ var React = require('react');
 import List from './list';
 
 
-export default class Form extends React.Component {
-    constructor(props) {
+export default class Form extends React.Component{
+
+  constructor(props) {
         super(props);
     }
 
@@ -11,7 +12,7 @@ export default class Form extends React.Component {
         return (
             <form className="card form">
                 <input type="text" />
-                <button>Add</button>
+                <button onClick={() => this.setEditing(false)}>Add</button>
                 <button type="button" onClick={() => this.setEditing(false)}>
                     Cancel
                 </button>
@@ -19,3 +20,4 @@ export default class Form extends React.Component {
         );
     }
 }
+

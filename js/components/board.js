@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import List from './list';
 import Form from './form';
 
@@ -25,11 +25,14 @@ export default class Board extends React.Component{
             <List key={index} {...list} />
         );
 
+        
+//// onAdd is a prop, addList is the function
         return (
             <div className="board">
                 <h2>{this.props.title}</h2>
                 <div className="lists">
                     {lists}
+
                     <Form type="list" onAdd={this.addList} />
                 </div>
               </div>

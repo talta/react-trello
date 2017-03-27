@@ -1,5 +1,5 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+// import ReactDOM from 'react-dom';
 import Card from './card';
 import Form from './form'
 
@@ -16,7 +16,12 @@ export default class List extends React.Component {
             }]
         }
     }
+    onAddInputChanged(){
+        ///when the  input is changed
 
+
+
+    }
     render() {
         const cards = this.state.cards.map((card, index) =>
             <Card key={index} {...card} />
@@ -36,7 +41,7 @@ export default class List extends React.Component {
 
 List.propTypes = {
 	listTitle: React.PropTypes.string,
-	cards: React.PropTypes.array
+	cards: React.PropTypes.array,
 };
 
  
