@@ -3,7 +3,18 @@ import React from 'react';
 import Card from './card';
 import Form from './form'
 
-export default class List extends React.Component {
+
+const comments = [
+    {author: 'TALTA',
+        text: 'Because I said so'
+    },
+    {
+        author: "Ric Mentor",
+        text: "Go T Go"
+    }
+];
+
+ca {
     constructor(props) {
         super(props);
         this.state = {
@@ -24,7 +35,7 @@ export default class List extends React.Component {
     }
     render() {
         const cards = this.state.cards.map((card, index) =>
-            <Card key={index} {...card} />
+            <Card key={index}  comments={comments} text={card.text} />
         );
         return (
             <div className="list">
